@@ -3,7 +3,7 @@ template = {}
 
 template.main = ->
     """
-    <div class='w3-container w3-light-grey'>
+    <div class='w3-container w3-light-grey' style='height:100%'>
     
     	<div class='w3-container w3-rest'>
     		<h1>Sigil Pal</h1>
@@ -39,3 +39,4 @@ template.result = (input) ->
 		<p>Seed Number: #{input.SeedNum}</p>
 	</div>
 	"""
+

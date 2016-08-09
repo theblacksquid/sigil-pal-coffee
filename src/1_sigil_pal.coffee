@@ -57,3 +57,19 @@ digest = (str) ->
 		SeedNum: getSeedNum getNumVal(str)
 		}
 
+matchToKamea = (arrOfChars, kamea) ->
+	result = []
+	newArr = flatten(kamea)
+	for char in arrOfChars.join("").toUpperCase().split("")
+		result.push newArr.filter((x) ->
+			if x is numerology[char]
+				return numerology[char]
+			else if x is (numerology[char]/10)
+				return (numerology[char]/10)
+			else if x is (numerology[char]/100)
+				return (numerology[char]/100)
+			)[0]
+	result
+
+
+
