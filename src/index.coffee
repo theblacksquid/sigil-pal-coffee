@@ -9,6 +9,8 @@ class SigilView
 		paper = Raphael(element, size, size)
 		kamea = renderKamea(paper, @input.SeedNum, size)
 		numbers = matchToKamea(@input.BaseChars, kameas[@input.SeedNum])
+		console.log @input.BaseChars
+		console.log kameas[@input.SeedNum]
 		console.log numbers
 		coords = findNumberCoords(numbers, kamea.numbers)
 		path = generatePath(coords)
